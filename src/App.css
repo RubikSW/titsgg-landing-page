@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: #007df7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 1;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.TITSGG {
+  min-height: 100vh;
+  width: 50vw;
+  z-index: 10;
+  -webkit-clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  overflow: hidden;
+}
+
+.TITSGG:hover {
+  cursor: pointer;
+  background:linear-gradient(0deg, #ff452c8c, #ffffff00 60%);
+  background-repeat: no-repeat;
+  background-size:cover;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.TITSRP {
+  min-height: 100vh;
+  width: 100vw;
+  background: url(https://images6.alphacoders.com/557/557807.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: 1s ease-in-out 0s 1 FromRight;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.videoHover {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+.videoHover:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg, #3c9dffad, #ffffff00 60%);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.videoHover_rust {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 2;
+}
+
+.videoHover_rust:hover {
+  cursor: pointer;
+  background: linear-gradient(0deg, #ff452c8c, #ffffff00 60%);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.videoTag, .videoTag_rust {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.TITSRP:hover .videoTag, .TITSGG:hover .videoTag_rust {
+  display: block;
+}
+
+.gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  -webkit-clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  background: url(https://pbs.twimg.com/media/FUL_reKXEAML_Lg?format=jpg&name=large);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position-x: -230px;
+}
+
+.gradient {
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  z-index: 5;
+  -webkit-clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  clip-path: polygon(0 0,100% 0,70% 100%,0 100%);
+  overflow: hidden;
+  position: absolute;
+}
+
+.discord-widget {
+  z-index: 100;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.466);
+}
+
+.discord-widget:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    pointer-events: none;
+  }
+  100% {
+    transform: translateX(0%);
+    pointer-events: all;
+  }
+}
+
+@keyframes FromRight {
+  0% {
+    transform: scale(1.1);
+    pointer-events: none;
+  }
+  100% {
+    transform: scale(1);
+    pointer-events: all;
+  }
+}
