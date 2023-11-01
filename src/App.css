@@ -1,9 +1,19 @@
+* {
+  font-family: 'Rubik';
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
 .App {
   text-align: center;
+  background-color: black;
 }
 
 body {
-  background-color: #007df7;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -12,7 +22,7 @@ body {
   color: white;
   z-index: 1;
   justify-content: flex-start;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .TITSGG {
@@ -43,6 +53,7 @@ body {
   background: url(https://images6.alphacoders.com/557/557807.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
   animation: 1s ease-in-out 0s 1 FromRight;
   overflow: hidden;
   z-index: 1;
@@ -62,6 +73,7 @@ body {
   background-size:cover;
 }
 
+
 .videoHover_rust {
   position: absolute;
   min-width: 100vw;
@@ -76,18 +88,27 @@ body {
   background-size:cover;
 }
 
-.videoTag, .videoTag_rust {
-  position: fixed;
+.videoTag, .videoTag_rust, .titsrp_page_vid {
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 1;
+  z-index: -0;
   display: none;
 }
 
+.titsrp_page_vid {
+  display: block;
+}
+
+
 .TITSRP:hover .videoTag, .TITSGG:hover .videoTag_rust {
   display: block;
+}
+
+.SolidBlockPage:hover .videoTag {
+  display: none;
 }
 
 .gradient::before {
@@ -103,7 +124,20 @@ body {
   background: url(https://pbs.twimg.com/media/FUL_reKXEAML_Lg?format=jpg&name=large);
   background-repeat: no-repeat;
   background-size:cover;
+  -webkit-background-size: cover;
   background-position-x: -230px;
+}
+
+.titsgglogo {
+  margin: 10px auto;
+  height: 150px;
+  filter: drop-shadow(1px 1px 16px black);
+}
+
+.titsrplogo {
+  margin: 20px 60%;
+  height: 150px;
+  filter: drop-shadow(1px 1px 16px black);
 }
 
 .gradient {
@@ -117,18 +151,203 @@ body {
   position: absolute;
 }
 
-.discord-widget {
+.discord-widget, .discord-widget-mobile {
   z-index: 100;
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 40px;
+  top: 40px;
   border-radius: 10px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.466);
 }
 
-.discord-widget:hover {
+.discord-widget:hover, .discord-widget-mobile:hover {
   cursor: pointer;
   filter: brightness(1.1);
+}
+
+.discord-widget-mobile {
+  display: none;
+}
+
+.pageLogo {
+  width: 35%;
+  margin: auto;
+}
+
+.page1:after, .gradient:after, .TITSGG:after, .TITSRP:after, .videoHover_rust:after, .videoHover:after, .videoTag_rust:after, .videoTag:after  {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), #000000 100%);
+  width: 100%;
+  height: 4em;
+}
+
+.SolidBlockPage {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: repeating-linear-gradient(
+            to bottom,
+            #000000,
+            #ffffff00 50%,
+            transparent 50%,
+            #ffffff00 55%,
+            #000000 100%
+    ), url("us.png") no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+
+.SolidBlockPage .title {
+  font-size: 90px;
+  font-weight: 800;
+  text-shadow: 0 0 20px black;
+  padding: 14px;
+  z-index: 2;
+  position: relative;
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+.SolidBlockPage .sbstop {
+  margin: 6% auto;
+  text-shadow: 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.SolidBlockPage .sbsBody {
+  font-size: 43px;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.SolidBlockPage .sbsBg {
+  background-color: black;
+  width: 100%;
+  height: 38%;
+  z-index: 1;
+  position: absolute;
+  transform: rotate(358deg);
+  max-width: 99%;
+  margin: auto;
+  top: 104%;
+}
+
+.SolidBlockPage .birb {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform: rotate(11deg);
+  z-index: 2;
+}
+
+.JoinButt {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 50px;
+  color: white;
+  border: 1px solid white;
+}
+
+.JoinButt:hover {
+  background-color: #cccccc79;
+  cursor: pointer;
+}
+
+.SolidBlockPage .heart {
+  animation: heartbeat 1s infinite;
+}
+
+.TitsRPPage {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: repeating-linear-gradient(
+            to bottom,
+            #000000,
+            #ffffff00 50%,
+            transparent 50%,
+            #ffffff00 55%,
+            #001151 100%
+    ), url("gmod.png") no-repeat;
+    background-size:contain;
+    background-position: top;
+}
+
+.TitsRPPage .titsrp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 70vw;
+}
+
+.TitsRPPage .users {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  width: 10vw;
+  min-width: 170px;
+  border-radius: 7px;
+}
+
+.TitsRPPage .users a { 
+  font-size: .5em;
+}
+
+
+.RustPage {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #001151, #ffffff00 10%), url("rustbg.png") ;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.RustPage .rust {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 15% auto;
+  width: 80vw;
+}
+
+.titslogo {
+  width:35%;
+  margin-bottom: 30px;
+}
+
+.rustlogo {
+  width:auto;
+  margin-bottom: 30px;
+}
+
+.titsinfo, .rustinfo, .sbsBody {
+  font-size:1em !important;
+  filter: drop-shadow(0px 0px 10px black);
 }
 
 @keyframes slideInFromLeft {
@@ -150,5 +369,122 @@ body {
   100% {
     transform: scale(1);
     pointer-events: all;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale( 1 );    
+  }
+  20% {
+    transform: scale( 1.2 ) 
+  } 
+ 
+}
+
+
+@media (max-width: 730px) {
+  .discord-widget {
+    display: none;
+  }
+
+  .discord-widget-mobile {
+    display: block;
+    top: unset;
+    bottom: 20px;
+    right: 30px;
+  }
+
+  .TITSRP {
+    background-position-x: 70%;
+  }
+
+  .SolidBlockPage .title {
+    font-size: 40px;
+    font-weight: 800;
+    text-shadow: 0 0 20px black;
+    padding: 14px;
+    z-index: 2;
+    position: relative;
+    max-width: 100%;
+    margin: 7px auto;
+  }
+
+  .pageLogo {
+    width: 87%;
+  }
+
+  .SolidBlockPage, .TitsRPPage, .page1 {
+    height: 73vh !important;
+    margin: 0 !important;
+  }
+
+  .page1:after, .gradient:after, .TITSGG:after, .TITSRP:after, .videoHover_rust:after, .videoHover:after, .videoTag_rust:after, .videoTag:after {
+    height: 30em;
+  }
+
+  .SolidBlockPage .sbsBody {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    width: 95vw;
+  }
+
+  .SolidBlockPage .birb {
+    position: absolute;
+    left: 405px;
+    top: 88px;
+    transform: rotate(11deg);
+    z-index: 2;
+    width: 183px;
+    overflow: hidden;
+  }
+
+  .TitsRPPage {
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: repeating-linear-gradient( to bottom, #000000, #ffffff00 50%, transparent 50%, #ffffff00 55%, #001352 100% ), url(http://localhost:3000/static/media/gmod.fd624ed….png) no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .TitsRPPage .titsrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+  }
+
+  .titslogo {
+    width:85%;
+    margin-bottom: 30px;
+  }
+
+  .titsinfo, .rustinfo {
+    font-size:19px;
+  }
+
+  .TitsRPPage .titsrp .stats {
+    display: none !important;
+  }
+
+  .RustPage .rust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+  }
+
+  .rustlogo {
+    width:85%;
+    margin-bottom: 30px;
+  }
+
+  .SolidBlockPage .sbstop {
+    width: 100vw;
   }
 }
