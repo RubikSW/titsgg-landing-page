@@ -38,7 +38,7 @@ function App() {
           <img className='pageLogo' src={sbslogo}></img>
             <img className='birb' src={bird}></img>
             <div className='title'><a style={{display:'inline-flex', alignItems: 'baseline'}}>Made with  <div className='heart'>❤️</div></a></div>
-            <div className='sbsBody'>Solid Block Studios hosts some of the most popular game servers for Source Engine games. In 2014, SugarTits created TitsRP - a lite roleplay-based Garry's Mod server heavily based on the popular 'DarkRP' gamemode. Because we own our own hardware and we take our time creating programming new features, we can ensure players have the best experience possible. </div>
+            <div className='sbsBody'>Solid Block Studios hosts some of the most popular game servers for Source Engine games. In 2014, KDawgE created TitsRP - a lite roleplay-based Garry's Mod server heavily based on the popular 'DarkRP' gamemode. Because we own our own hardware and we take our time creating programming new features, we can ensure players have the best experience possible. </div>
           </div>
         </div>
         <div className='TitsRPPage'>
